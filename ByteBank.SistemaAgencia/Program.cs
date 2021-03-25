@@ -13,16 +13,24 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
-            DateTime dataFimPagamento = new DateTime(2021, 6, 05);
-            DateTime dataCorrente = DateTime.Now;
+           string urlParametros = "http://www.bytebank.com/cambio?moedaOrigem=real&moedaDestino=dolar";
+           ExtratorValorDeArgumentosURL extratorDeValores = new ExtratorValorDeArgumentosURL(urlParametros);
 
-            TimeSpan diferença = TimeSpan.FromMinutes(60); //dataFimPagamento - dataCorrente;
-
-            string mensagem = "Vencimento em " + TimeSpanHumanizeExtensions.Humanize(diferença);
+           string valor = extratorDeValores.GetValor("moedaDestino");
+           Console.WriteLine("Valor de moedaDestino: " + valor);
             
-            Console.WriteLine(mensagem);
+            
+
+            //DateTime dataFimPagamento = new DateTime(2021, 6, 05);
+            //DateTime dataCorrente = DateTime.Now;
+
+            //TimeSpan diferença = TimeSpan.FromMinutes(60); //dataFimPagamento - dataCorrente;
+
+            // string mensagem = "Vencimento em " + TimeSpanHumanizeExtensions.Humanize(diferença);
+
+            // Console.WriteLine(mensagem);
 
             Console.ReadLine();
-        }   
+        }
     }
 }
