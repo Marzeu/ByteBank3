@@ -12,10 +12,13 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
-            ContaCorrente conta = new ContaCorrente(847, 489754);
-            Funcionario funcionario = null;
+            DateTime dataFimPagamento = new DateTime(2021, 3, 25);
+            DateTime dataCorrente = DateTime.Now;
 
-            Console.WriteLine(conta.Numero);
+            Console.WriteLine(dataFimPagamento);
+            Console.WriteLine(dataCorrente);
+
+
             Console.ReadLine();
         }
     }
