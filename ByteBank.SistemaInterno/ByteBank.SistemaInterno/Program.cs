@@ -12,6 +12,11 @@ namespace ByteBank.SistemaInterno
         static void Main(string[] args)
         {
             ContaCorrente conta = new ContaCorrente(456, 455789);
+
+
+            conta.Sacar(-19);
         }
+
+
     }
 }
