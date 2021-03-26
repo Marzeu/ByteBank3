@@ -15,6 +15,10 @@ namespace ByteBank.SistemaAgencia
         {
             ListaDeContaCorrente lista = new ListaDeContaCorrente();
 
+            ContaCorrente contaDoGui = new ContaCorrente(1111546, 567123);
+
+            lista.Adicionar(contaDoGui);
+
             lista.Adicionar(new ContaCorrente(876, 567098));
             lista.Adicionar(new ContaCorrente(876, 654798));
             lista.Adicionar(new ContaCorrente(876, 562356));
@@ -25,6 +29,12 @@ namespace ByteBank.SistemaAgencia
             lista.Adicionar(new ContaCorrente(876, 562356));
             lista.Adicionar(new ContaCorrente(876, 562356));
 
+            lista.EscreverListaNaTela();
+
+            lista.Remover(contaDoGui);
+            Console.WriteLine("Após remover o item");
+
+            lista.EscreverListaNaTela();
 
             //string urlParametros = "http://www.bytebank.com/cambio?moedaOrigem=real&moedaDestino=dolar&valor=1500";
             //ExtratorValorDeArgumentosURL extratorDeValores = new ExtratorValorDeArgumentosURL(urlParametros);

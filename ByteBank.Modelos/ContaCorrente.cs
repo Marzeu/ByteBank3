@@ -122,7 +122,6 @@ namespace ByteBank.Modelos
             }
 
             return Numero == outraconta.Numero && Agencia == outraconta.Agencia;
-
         }
     }
 }
