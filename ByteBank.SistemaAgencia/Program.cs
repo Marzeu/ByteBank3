@@ -13,6 +13,11 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
+            ListaDeObject listaDeIdade = new ListaDeObject();
+
+            lista
+
+
             ListaDeContaCorrente lista = new ListaDeContaCorrente();
 
             ContaCorrente contaDoGui = new ContaCorrente(111, 111111);
