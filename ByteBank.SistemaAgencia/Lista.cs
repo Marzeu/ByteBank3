@@ -39,8 +39,8 @@ namespace ByteBank.SistemaAgencia
         {
             foreach (T item in itens)
             {
-                Adicionar(item)
-                }
+                Adicionar(item);
+            }
         }
 
         public void Remover(T item)
