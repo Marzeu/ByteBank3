@@ -15,25 +15,20 @@ namespace ByteBank.SistemaAgencia
         {
             ListaDeContaCorrente lista = new ListaDeContaCorrente();
 
-            ContaCorrente contaDoGui = new ContaCorrente(1111546, 567123);
+            ContaCorrente contaDoGui = new ContaCorrente(111, 111111);
 
-            lista.Adicionar(contaDoGui);
-
-            lista.Adicionar(new ContaCorrente(876, 567098));
-            lista.Adicionar(new ContaCorrente(876, 654798));
-            lista.Adicionar(new ContaCorrente(876, 562356));
-            lista.Adicionar(new ContaCorrente(876, 562356));
-            lista.Adicionar(new ContaCorrente(876, 562356));
-            lista.Adicionar(new ContaCorrente(876, 562356));
-            lista.Adicionar(new ContaCorrente(876, 562356));
-            lista.Adicionar(new ContaCorrente(876, 562356));
-            lista.Adicionar(new ContaCorrente(876, 562356));
+            lista.AdicionarVarios(
+                contaDoGui,
+                new ContaCorrente(876, 567098),
+                new ContaCorrente(876, 654798));
 
             for (int i = 0; i < lista.Tamanho; i++)
             {
                 ContaCorrente itemAtual = lista[i];
                 Console.WriteLine($"Item na posição {i} = Conta {itemAtual.Numero}/{itemAtual.Agencia}");
             }
+
+
 
 
             //string urlParametros = "http://www.bytebank.com/cambio?moedaOrigem=real&moedaDestino=dolar&valor=1500";
