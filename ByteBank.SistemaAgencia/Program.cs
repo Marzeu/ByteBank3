@@ -13,9 +13,9 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
-            ListaDeObject listaDeIdade = new ListaDeObject();
+            
+            
 
-            lista
 
 
             ListaDeContaCorrente lista = new ListaDeContaCorrente();
