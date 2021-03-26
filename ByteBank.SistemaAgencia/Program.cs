@@ -13,6 +13,17 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
+            ListaDeContaCorrente lista = new ListaDeContaCorrente();
+
+            lista.Adicionar(new ContaCorrente(876, 567098));
+            lista.Adicionar(new ContaCorrente(876, 654798));
+            lista.Adicionar(new ContaCorrente(876, 562356));
+            lista.Adicionar(new ContaCorrente(876, 562356));
+            lista.Adicionar(new ContaCorrente(876, 562356));
+            lista.Adicionar(new ContaCorrente(876, 562356));
+            lista.Adicionar(new ContaCorrente(876, 562356));
+            lista.Adicionar(new ContaCorrente(876, 562356));
+            lista.Adicionar(new ContaCorrente(876, 562356));
 
 
             //string urlParametros = "http://www.bytebank.com/cambio?moedaOrigem=real&moedaDestino=dolar&valor=1500";
