@@ -14,12 +14,23 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
-            var conta = new ContaCorrente(344, 567543);
-            var gerenciador = new GerenciadorBonificacao();
-            var gerenciadores = new List<GerenciadorBonificacao>();
+            var contas = new List<ContaCorrente>()
+            {
+                new ContaCorrente(341, 567849),
+                new ContaCorrente(341, 512349),
+                new ContaCorrente(342, 567849),
+                new ContaCorrente(340, 567849),
+                new ContaCorrente(329, 567849),
+            };
 
-            conta.Depositar(100);
-              
+            contas.Sort();
+
+            foreach (var conta in contas)
+            {
+                Console.WriteLine($"Conta número {conta.Numero}, ag. {conta.Agencia}");
+            }
+
+
 
 
             //ListaDeContaCorrente lista = new ListaDeContaCorrente();

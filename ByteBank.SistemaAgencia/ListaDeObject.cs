@@ -39,7 +39,7 @@ namespace ByteBank.SistemaAgencia
         {
             foreach (object item in itens)
             {
-                Adicionar(item)
+                Adicionar(item);
             }
         }
 
