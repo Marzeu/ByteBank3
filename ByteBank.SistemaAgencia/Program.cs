@@ -7,6 +7,7 @@ using ByteBank.Modelos;
 using ByteBank.Modelos.Funcionarios;
 using Humanizer;
 using ByteBank.SistemaAgencia.Extensoes;
+using ByteBank.SistemaAgencia.Comparadores;
 
 namespace ByteBank.SistemaAgencia
 {
@@ -24,9 +25,13 @@ namespace ByteBank.SistemaAgencia
                 new ContaCorrente(329, 567849),
             };
 
-            contas.Sort();
+            // contas.Sort();
 
-            foreach (var conta in contas)
+            // contas.Sort(new ComparadorContaCorrentePorAgencia());
+
+            IOrderedEnumerable<ContaCorrente> contasOrdenada = contas.OrderBy(conta => conta.Numero);
+
+            foreach (var conta in contasOrdenada)
             {
                 Console.WriteLine($"Conta número {conta.Numero}, ag. {conta.Agencia}");
             }
